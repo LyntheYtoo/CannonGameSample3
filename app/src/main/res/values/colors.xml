@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="soft_blue">#4287f5</color>
+    <color name="soft_red">#fc4903</color>
+    <color name="game_screen_yellow">#fffbc9</color>
+    <color name="game_screen_red">#ffcec9</color>
+</resources>

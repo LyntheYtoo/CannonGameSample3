@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 총알을 나타내는 ImageView -->
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/bullet_size"
+    android:layout_height="@dimen/bullet_size"
+    android:src="@drawable/bullet_red">
+</ImageView>

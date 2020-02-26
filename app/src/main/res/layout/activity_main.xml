@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- 게임화면 백그라운드 -->
+    <FrameLayout
+        android:id="@+id/gamescreen_background"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/game_screen_yellow"
+
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- 대포를 나타내는 ImageView -->
+    <ImageView
+        android:id="@+id/cannon_imageview"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@android:color/transparent"
+        android:rotation="0"
+        android:src="@drawable/cannon_clip_art"
+
+        app:layout_constraintBottom_toBottomOf="@id/gamescreen_background"
+        app:layout_constraintDimensionRatio="h,2:5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 대포 조종 컨트롤 SeekBar -->
+    <!-- seekbar의 최대값은 180 ( rotation 값으로 써먹기 위해 각도와 동일시 ) -->
+    <SeekBar
+        android:id="@+id/controller_seekbar"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:max="180"
+        android:progress="0"
+
+        app:layout_constraintDimensionRatio="h,2:8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/fire_button"
+        app:layout_constraintTop_toBottomOf="@id/gamescreen_background"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!-- 대포 발사 버튼 -->
+    <Button
+        android:id="@+id/fire_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FIRE"
+        android:textSize="24sp"
+        android:textColor="@color/soft_red"
+        android:padding="12dp"
+
+        app:layout_constraintStart_toEndOf="@id/controller_seekbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/controller_seekbar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
